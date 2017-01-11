@@ -2,8 +2,8 @@ lazy val root = (project in file(".")).enablePlugins(BuildInfoPlugin).settings(
 
   name := "jacoco4sbt",
   organization := "de.johoop",
-  version := "2.2.0",
-  scalaVersion := "2.10.6",
+  version := "2.3.0",
+  scalaVersion := "2.11.8",
 
   sbtPlugin := true,
 
@@ -13,7 +13,7 @@ lazy val root = (project in file(".")).enablePlugins(BuildInfoPlugin).settings(
     "org.specs2"  %% "specs2-core"          % "3.8.4" % Test,
     "org.specs2"  %% "specs2-matcher-extra" % "3.8.4" % Test,
 
-    "org.mockito" %  "mockito-all"          % "1.10.19"  % Test,
+    "org.mockito" %  "mockito-core"         % "2.5.7"  % Test,
     "org.pegdown" %  "pegdown"              % "1.6.0"  % Test
   ),
 
@@ -29,4 +29,4 @@ lazy val root = (project in file(".")).enablePlugins(BuildInfoPlugin).settings(
 
 lazy val jacocoCore    = Artifact("org.jacoco.core", "jar", "jar")
 lazy val jacocoReport  = Artifact("org.jacoco.report", "jar", "jar")
-lazy val jacocoVersion = "0.7.5.201505241946"
+lazy val jacocoVersion = "0.7.8"
